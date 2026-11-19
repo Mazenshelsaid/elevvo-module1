@@ -1,0 +1,17 @@
+[Unit]
+Description=Simple Python HTTP Server
+After=network.target
+
+[Service]
+Type=simple
+User=webapp
+Group=webapp
+WorkingDirectory=/opt/webapp
+ExecStart=/usr/bin/python3 -m http.server 8080
+Restart=on-failure
+RestartSec=5
+NoNewPrivileges=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

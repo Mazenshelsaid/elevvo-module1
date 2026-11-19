@@ -1,0 +1,9 @@
+# NEVER commit private keys or secrets
+id_ed25519
+id_rsa
+*.pem
+*.key
+*_rsa
+*_ed25519
+!*.pub
+.ssh/
